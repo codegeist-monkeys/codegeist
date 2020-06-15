@@ -1,0 +1,30 @@
+{
+    "name": "codegeist-2020",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "nodemon -r esm app.js",
+        "lint": "eslint app.js routes"
+    },
+    "dependencies": {
+        "atlassian-connect-express": "^3.5.2",
+        "body-parser": "^1.19.0",
+        "compression": "^1.7.4",
+        "cookie-parser": "^1.4.4",
+        "errorhandler": "^1.5.1",
+        "esm": "^3.2.22",
+        "express": "^4.16.4",
+        "express-hbs": "^2.1.2",
+        "morgan": "^1.9.1",
+        "sequelize": "^5.8.6",
+        "sqlite3": "^4.2.0",
+        "static-expiry": ">=0.0.5"
+    },
+    "devDependencies": {
+        "eslint": "^7.2.0",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-import": "^2.21.2",
+        "ngrok": "^3.2.7",
+        "nodemon": "^2.0.4"
+    }
+}
