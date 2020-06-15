@@ -1,0 +1,39 @@
+{
+    "key": "codegeist-2020",
+    "name": "Codegeist 2020",
+    "description": "Code Diagram for Bitbucket Codegeist 2020",
+    "vendor": {
+        "name": "Codegeist",
+        "url": "https://github.com/jaymody/codegeist"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "modules": {
+        "webhooks": [
+            {
+                "event": "*",
+                "url": "/webhook"
+            }
+        ],
+        "repoPages": [
+            {
+                "url": "/connect-example?repoPath={repository.full_name}",
+                "name": {
+                    "value": "Codegeist 2020"
+                },
+                "location": "org.bitbucket.repository.navigation",
+                "key": "codegeist-2020-page",
+                "params": {
+                    "auiIcon": "aui-iconfont-doc"
+                }
+            }
+        ]
+    },
+    "scopes": ["account", "repository"],
+    "contexts": ["account"]
+}
