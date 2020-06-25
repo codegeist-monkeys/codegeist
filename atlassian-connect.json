@@ -22,7 +22,7 @@
         ],
         "repoPages": [
             {
-                "url": "/connect-example?repoPath={repository.full_name}",
+                "url": "/hello-world",
                 "name": {
                     "value": "Codegeist 2020"
                 },
