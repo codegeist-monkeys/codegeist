@@ -8,3 +8,4 @@ npm-debug.log
 credentials.json
 store.db
 package-lock.json
+public/js

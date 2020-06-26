@@ -27,25 +27,10 @@ export default function routes(app, addon) {
   //   1. the repository path (passed in the query string via a context parameter)
   //   2. the user who installed the add-on's display name (retrieved from Bitbucket via REST)
 
-  app.get('/connect-example', addon.authenticate(), (req, res) => {
+  app.get('/hello-world', addon.authenticate(), (req, res) => {
     // the call to addon.authenticate() above verifies the JWT token provided by Bitbucket
     // in the iframe URL
-
-    const httpClient = addon.httpClient(req);
-
-    httpClient.get('/2.0/user/', (err, resp, data) => {
-      try {
-        const parsedData = JSON.parse(data);
-        res.render('connect-example', {
-          title: 'Atlassian Connect',
-          displayName: parsedData.display_name,
-          repoPath: req.query.repoPath,
-        });
-      } catch (e) {
-        console.log(e);
-        res.sendStatus(500);
-      }
-    });
+    res.render('index');
   });
 
   // This route will handle webhooks from repositories this add-on is installed for.
